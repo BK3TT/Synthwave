@@ -16,7 +16,8 @@ In this mini project, they will be able to create and view (Orders, Customers an
 # Setting up project
 
 - Clone project files
-- Once project has cloned make sure to run `composer install` to get the required files for the project
+- Run `composer install` 
+- Run `composer dump-autoload`
 
 Please see the Wiki section to see more information about the API:
 

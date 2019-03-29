@@ -17,3 +17,7 @@ In this mini project, they will be able to create and view (Orders, Customers an
 
 - Clone project files
 - Once project has cloned make sure to run `composer install` to get the required files for the project
+
+Please see the Wiki section to see more information about the API:
+
+https://github.com/BK3TT/Synthwave/wiki

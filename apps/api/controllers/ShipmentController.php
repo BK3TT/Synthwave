@@ -36,4 +36,27 @@ class ShipmentController extends Controller
 
         return ['error' => 'Failed to create shipment.'];
     }
+
+    public function filter() 
+    {
+        if (!empty($this->data)) {
+            if (!isset($this->data['order'])) {
+                $this->data['order'] = 'ASC';
+            }
+
+            if ($this->data['type'] == 'date') {
+                if ($this->data['when'] == 'today') {
+                    $shipment = Shipment::whereRaw('date(created_at) = curdate()')
+                        ->orderBy('created_at', $this->data['order'])
+                        ->get();
+                }
+            }
+
+            if (!$shipment->isEmpty()) {
+                return $shipment;
+            }
+
+            return ['error' => 'No shipments to view'];
+        }
+    }
 }

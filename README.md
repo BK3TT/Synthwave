@@ -18,6 +18,7 @@ In this mini project, they will be able to create and view (Orders, Customers an
 - Clone project files
 - Run `composer install` 
 - Run `composer dump-autoload`
+- Import SQL dump to database
 
 Please see the Wiki section to see more information about the API:
 
